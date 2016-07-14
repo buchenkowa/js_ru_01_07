@@ -12,6 +12,7 @@ class ArticleList extends Component {
 
     constructor(props) {
       super(props);
+      //у тебя handleResetClick и так задается через =>, этот .bind лишний
       this.handleResetClick = this.handleResetClick.bind(this);
     }
 
@@ -54,7 +55,7 @@ class ArticleList extends Component {
         return (
             <div>
                 <h1>Article list</h1>
-
+                {/*Эти спаны не обязательны*/}
                 <span>{firstDate} - </span>
                 <span>{lastDate}</span>
                 <span onClick = {this.handleResetClick}> очистить</span>
